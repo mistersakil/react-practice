@@ -1,10 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-function App() {
-  return <h1> Hello React </h1>
-}
+import Clock from './components/Clock';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <App />
+  <>
+    <Clock locale="bn-BD" />
+    <Clock locale="en-UK" />
+    <Clock locale="en-IN" />
+    <Clock locale="ko-KR" />
+    <Clock locale="de-DE" />
+    <Clock locale="ja-JP" />
+  </>
 );
