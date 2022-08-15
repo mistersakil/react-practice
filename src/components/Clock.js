@@ -12,13 +12,14 @@ export default class Clock extends Component {
   timing() {
     this.setState({ date: new Date() });
   }
+
   componentWillUnmount() {
     clearInterval(this.clockInterval);
   }
   render() {
     return (
       <h1>
-        Time:{" "}
+        Time:
         <span>{this.state.date.toLocaleTimeString(this.props.locale)}</span>
       </h1>
     );
