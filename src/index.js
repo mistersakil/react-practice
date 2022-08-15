@@ -8,5 +8,6 @@ root.render(
   <>
     <Clock locale="bn-BD" />
     <One />
+    <One />
   </>
 );

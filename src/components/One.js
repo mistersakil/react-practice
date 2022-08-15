@@ -1,9 +1,9 @@
 import React from "react";
 
-export default () => {
+export default ({ name }) => {
   return (
     <div>
-      <h1>This is a function component</h1>
+      <h1>My name is {name}</h1>
     </div>
   );
 };
