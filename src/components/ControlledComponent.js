@@ -10,20 +10,35 @@ export default class ControlledComponent extends Component {
     country: "",
     skills: [],
     bio: "",
+    result: false,
   };
   inputChangeHander = (event) => {
     const { name, value } = event.target;
     this.setState({
       [name]: value,
+      result: false,
     });
   };
+  formSubmitHandler = (event) => {
+    event.preventDefault();
+    this.setState({ result: true });
+  };
   render() {
-    const { name, email, password, mobile, gender, bio, country, skills } =
-      this.state;
+    const {
+      name,
+      email,
+      password,
+      mobile,
+      gender,
+      bio,
+      country,
+      skills,
+      result,
+    } = this.state;
     return (
       <div>
         <h1>Controlled Component</h1>
-        <form>
+        <form onSubmit={(e) => this.formSubmitHandler(e)}>
           <div className="row">
             <label>Text field: </label>
             <input
@@ -76,6 +91,14 @@ export default class ControlledComponent extends Component {
               value={bio}
               onChange={(e) => this.inputChangeHander(e)}
             ></textarea>
+          </div>
+          <div className="row">
+            <label>submit </label>
+            <input type="submit" name="submit" value="submit" />
+          </div>
+          <div className="row">
+            <label>result </label>
+            {result && <h2>{`${name} ${email} ${mobile}`} </h2>}
           </div>
         </form>
       </div>
