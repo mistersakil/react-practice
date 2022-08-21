@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0 auto;
+  padding: 1rem 0;
+  width: 70%;
+}
+.row {
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  background-color: brown;
+  height: 50px;
+  padding: 5px 0 5px 10px;
+  color: #fff;
+}
+.row label {
+  text-transform: capitalize;
+}
+.row input,
+.row textarea {
+  height: 100%;
+  font-size: 20px;
+}
