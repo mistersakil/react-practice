@@ -22,6 +22,11 @@ export default class TemperatureCalculator extends Component {
           changeHandler={this.temperatureChangeHandler}
         />
 
+        <TemperatureInput
+          scale="f"
+          changeHandler={this.temperatureChangeHandler}
+        />
+
         {boilingVerdict}
       </>
     );
