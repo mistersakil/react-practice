@@ -7,6 +7,7 @@ const UseCallbackHook = () => {
   const [countOne, setCountOne] = useState(1);
   const [countFive, setCountFive] = useState(5);
   const incrementByOne = useCallback(() => {
+    // setCountOne(countOne + 1);
     setCountOne((previous) => previous + 1);
   }, []);
   const incrementByFive = useCallback(() => {
