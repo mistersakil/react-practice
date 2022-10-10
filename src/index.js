@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-import TemperatureCalculator from "./components/TemperatureCalculator";
+import UseCallbackHook from "./components/UseCallbackHook";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <>
-    <TemperatureCalculator />
+    <UseCallbackHook />
   </>
 );
