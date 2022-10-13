@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-
+import Input from "./Input";
 const UseRefHooke = () => {
   const inputRef = useRef(null);
   useEffect(function () {
@@ -8,8 +8,7 @@ const UseRefHooke = () => {
   return (
     <div>
       <h1>useRef hook practice</h1>
-      Type something:
-      <input type="text" placeholder="type something" ref={inputRef} />
+      <Input type="text" placeholder="type something" ref={inputRef} />
     </div>
   );
 };
