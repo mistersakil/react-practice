@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-import TimeOnUseRef from "./components/TimeOnUseRef";
+import UseReducerHook from "./components/UseReducerHook";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <>
-    <TimeOnUseRef />
+    <UseReducerHook />
   </>
 );
