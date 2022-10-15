@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-import UseReducerHook from "./components/UseReducerHook";
+import Clock2 from "./components/Clock2";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <>
-    <UseReducerHook />
+    <Clock2 />
   </>
 );
