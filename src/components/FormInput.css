@@ -18,3 +18,13 @@
   text-indent: 10px;
   font-size: 20px;
 }
+
+.btnGroup {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+}
+.btnGroup button {
+  padding: 10px 30px;
+  font-size: 20px;
+}

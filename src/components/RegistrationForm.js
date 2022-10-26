@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 import { useState } from "react";
 import FormInput from "./FormInput";
 
@@ -33,6 +34,10 @@ let inputArr = [
   },
 ];
 const RegistrationForm = () => {
+  /**
+   * Initial Value
+   * @type {{ name: string, email: string, mobile: number, password: string}}
+   */
   const initialValue = {
     name: "",
     email: "",
@@ -40,6 +45,42 @@ const RegistrationForm = () => {
     password: "",
   };
   const [values, setValues] = useState(initialValue);
+  /**
+   * Handle change
+   * @param {Object} event
+   * @returns {Object} setValues
+   */
+  function handleChange(event) {
+    setValues((preValues) => {
+      return { ...preValues, [event.target.name]: event.target.value };
+    });
+  }
+  /**
+   * Handle submit
+   * @param {Object} event
+   * @returns {null} null
+   */
+  function handleSubmit(event) {
+    event.preventDefault();
+    console.log(values);
+  }
+  /**
+   * Handle reset
+   * @param {Object} event
+   * @returns {null} null
+   */
+  function handleReset(event) {
+    setValues((preValues) => {
+      return initialValue;
+    });
+  }
+  /**
+   * Use effect
+   * @returns {null} null
+   */
+  useEffect(() => {
+    console.log(values);
+  }, []);
   return (
     <div className="registrationForm">
       <h1>Registration Form</h1>
@@ -49,9 +90,18 @@ const RegistrationForm = () => {
             key={inputItem.id}
             {...inputItem}
             value={values[inputItem.name]}
+            handleChange={handleChange}
           />
         );
       })}
+      <div className="btnGroup">
+        <button type="button" onClick={handleReset}>
+          Reset
+        </button>
+        <button type="button" onClick={handleSubmit}>
+          Save
+        </button>
+      </div>
     </div>
   );
 };

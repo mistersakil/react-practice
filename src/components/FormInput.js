@@ -1,6 +1,6 @@
 import React from "react";
 import "./FormInput.css";
-const FormInput = ({ name, type, placeholder, value, label }) => {
+const FormInput = ({ name, type, placeholder, value, label, handleChange }) => {
   return (
     <div className="formInput">
       <label htmlFor={name}>{label}</label>
@@ -9,7 +9,7 @@ const FormInput = ({ name, type, placeholder, value, label }) => {
         value={value}
         placeholder={placeholder}
         name={name}
-        readOnly
+        onChange={handleChange}
       />
     </div>
   );
