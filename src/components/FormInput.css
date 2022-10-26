@@ -1,0 +1,20 @@
+.registrationForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.formInput {
+  height: 60px;
+  background-color: grey;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+  padding-left: 10px;
+  gap: 10px;
+}
+.formInput input {
+  height: 100%;
+  text-indent: 10px;
+  font-size: 20px;
+}

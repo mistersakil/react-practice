@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-
-import Clock2 from "./components/Clock2";
+import "./App.css";
+import RegistrationForm from "./components/RegistrationForm";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <>
-    <Clock2 />
-  </>
+  <div className="app">
+    <RegistrationForm />
+  </div>
 );
